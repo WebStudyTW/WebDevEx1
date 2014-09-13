@@ -5,17 +5,16 @@ var computeUtil = new ComputeUtil();
 
 describe('Util Function', function () {
 
-
-
-
-
-
-
     describe('#multiply()', function () {
         it('should multiply two numbers', function () {
             var num1 = Math.floor(Math.random() * 100);
             var num2 = Math.floor(Math.random() * 100);
             computeUtil.multiply(num1, num2).should.be.equal(num1 * num2);
+        });
+        it('show be a number', function () {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            computeUtil.multiply(num1, num2).should.be.a.Number;
         });
     });
 
@@ -25,12 +24,24 @@ describe('Util Function', function () {
             var num2 = Math.floor(Math.random() * 100);
             computeUtil.add(num1, num2).should.be.equal(num1 + num2);
         });
+        it('show be a number', function () {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            computeUtil.add(num1, num2).should.be.a.Number;
+        });
+    });
+
+    describe('#divide()', function () {
+        it('should divide two numbers', function () {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            computeUtil.divide(num1, num2).should.be.equal(num1 / num2);
+        });
 
         it('show be a number', function () {
             var num1 = Math.floor(Math.random() * 100);
             var num2 = Math.floor(Math.random() * 100);
-            computeUtil.multiply(num1, num2).should.be.a.Number;
-            computeUtil.add(num1, num2).should.be.a.Number;
+            computeUtil.divide(num1, num2).should.be.a.Number;
         });
     });
 });
