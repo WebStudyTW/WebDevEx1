@@ -42,7 +42,6 @@ describe('Util Function', function () {
             var num1 = Math.floor(Math.random() * 100);
             var num2 = Math.floor(Math.random() * 100);
             computeUtil.divide(num1, num2).should.be.a.Number;
-
         });
 
     });
@@ -58,7 +57,6 @@ describe('Util Function', function () {
             var num1 = Math.floor(Math.random() * 100);
             var num2 = Math.floor(Math.random() * 100);
             computeUtil.minus(num1, num2).should.be.a.Number;
-
         });
 
     });
@@ -91,7 +89,20 @@ describe('Util Function', function () {
         it('show be a number', function () {
             var string = 'R123';
             computeUtil.stringSplit(string).should.be.a.Array;
+        });
+    });
 
+    describe('#mod()', function () {
+        it('should mod two numbers', function () {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            computeUtil.mod(num1, num2).should.be.equal(num1 % num2);
+        });
+
+        it('show be a number', function () {
+            var num1 = Math.floor(Math.random() * 100);
+            var num2 = Math.floor(Math.random() * 100);
+            computeUtil.mod(num1, num2).should.be.a.Number;
         });
     });
 });
