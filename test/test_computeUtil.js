@@ -63,4 +63,18 @@ describe('Util Function', function () {
             computeUtil.mapID(chr).should.be.a.Number;
         });
     });
+
+    describe('#stringSplit()', function () {
+        it('should stringSplit two numbers', function () {
+            var string = 'R123';
+            computeUtil.stringSplit(string).should.be.eql({
+                '0': 'R', '1': '1', '2': '2', '3': '3'
+            });
+        });
+
+        it('show be a number', function () {
+            var string = 'R123';
+            computeUtil.stringSplit(string).should.be.a.Array;
+        });
+    });
 });
